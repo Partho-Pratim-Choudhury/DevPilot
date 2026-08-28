@@ -23,9 +23,7 @@ import lombok.RequiredArgsConstructor;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-    private GithubOAuth2UserService gitHubOAuth2UserService;
-    private AuthenticationSuccessHandler oauth2SuccessHandler;
-    private AuthenticationFailureHandler oauth2FailureHandler;
+    private final GithubOAuth2UserService gitHubOAuth2UserService;
 
     @Bean
     SecurityFilterChain securityFilterChain(
